@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Property {
+  id           String    @id @default(cuid())
+  title        String
+  slug         String    @unique
+  description  String
+  price        Float
+  location     String
+  bedrooms     Int
+  bathrooms    Int
+  area         Float
+  propertyType String
+  features     String    @default("[]") // JSON array stored as string
+  images       String    @default("[]") // JSON array of Cloudinary URLs
+  featured     Boolean   @default(false)
+  status       String    @default("available") // available, sold, pending
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  contacts     Contact[]
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String
+  content     String
+  coverImage  String
+  author      String
+  category    String
+  tags        String    @default("[]") // JSON array stored as string
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Contact {
+  id         String    @id @default(cuid())
+  name       String
+  email      String
+  phone      String?
+  message    String
+  propertyId String?
+  property   Property? @relation(fields: [propertyId], references: [id])
+  status     String    @default("new") // new, read, replied
+  createdAt  DateTime  @default(now())
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
