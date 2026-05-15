@@ -101,7 +101,7 @@ export function HeroSection() {
           className="mb-10 lg:mb-16"
         >
           <span
-            className="uppercase font-sans text-black/20"
+            className="uppercase font-sans text-black/90"
             style={{ fontSize: 8, letterSpacing: "0.5em" }}
           >
             Est. 2013 — Guwahati, Assam
@@ -267,7 +267,7 @@ export function HeroSection() {
             >
               <span
                 className="font-sans uppercase group-hover:text-black/50 transition-colors duration-300"
-                style={{ fontSize: 8, letterSpacing: "0.38em", color: "rgba(0,0,0,0.22)" }}
+                style={{ fontSize: 8, letterSpacing: "0.38em", color: "rgba(0,0,0,1)" }}
               >
                 Our Story
               </span>

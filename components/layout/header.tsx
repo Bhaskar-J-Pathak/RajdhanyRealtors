@@ -39,8 +39,8 @@ export function Header() {
                 className={cn(
                   "nav-link text-xs tracking-[0.2em] uppercase transition-all",
                   pathname === link.href
-                    ? "text-white"
-                    : "text-white/70 hover:text-white"
+                    ? "text-black"
+                    : "text-black/70 hover:text-black"
                 )}
               >
                 {link.label}

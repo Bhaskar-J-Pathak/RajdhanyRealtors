@@ -121,16 +121,16 @@ export function Footer() {
               style={{ fontSize: 12.5, color: "rgba(255,255,255,0.26)" }}
             >
               <li className="leading-relaxed">
-                GS Road, Christian Basti
+                Phaguna Rabha High School Path, House No-3, Kahilipara Road, Jatia
                 <br />
-                Guwahati, Assam — 781005
+                Guwahati, Assam — 781006
               </li>
               <li>
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+917577957640"
                   className="hover:text-white/55 transition-colors duration-300"
                 >
-                  +91 12345 67890
+                  +91 75779 57640
                 </a>
               </li>
               <li>

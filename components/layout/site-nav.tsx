@@ -40,7 +40,7 @@ export function SiteNav() {
               Rajdhany
             </span>
             <span
-              className="font-sans uppercase text-black/20 group-hover:text-black/40 transition-colors duration-300"
+              className="font-sans uppercase text-black group-hover:text-black transition-colors duration-300"
               style={{ fontSize: 7.5, letterSpacing: "0.5em" }}
             >
               Realtors
